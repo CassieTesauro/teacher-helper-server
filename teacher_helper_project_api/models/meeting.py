@@ -1,8 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 class Meeting(models.Model):
-    name = models.Charfield(max_length=50)
-    description = models.Charfield(max_length=1000)
-    date = models.DateField() #OR DATETIME?
-    time = models.TimeField() #OR DATETIME?
-    userId = models. #NO 1 TO 1 WITH USER, WHAT TO PUT IN MODEL?
+    name = models.CharField(max_length=50)
+    description = models.TextField()
+    date = models.DateField() 
+    time = models.TimeField() 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
