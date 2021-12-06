@@ -2,7 +2,7 @@
   good-names=i,j,ex,pk
 
 [MESSAGES CONTROL]
-  disable=broad-except
+  disable=broad-except, redefined-builtin, missing-module-docstring
 
 [MASTER]
   disable=C0114,

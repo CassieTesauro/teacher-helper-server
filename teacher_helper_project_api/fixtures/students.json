@@ -1,0 +1,163 @@
+[
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 1,
+        "fields": {
+            "name": "Amy Anders",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 2,
+        "fields": {
+            "name": "Brian Brown",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 3,
+        "fields": {
+            "name": "Carl Cortner",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 4,
+        "fields": {
+            "name": "Darryl Downs",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 5,
+        "fields": {
+            "name": "Erica Esters",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 6,
+        "fields": {
+            "name": "Frank Forester",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 7,
+        "fields": {
+            "name": "Gavin Goodwin",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 8,
+        "fields": {
+            "name": "Haley Henderson",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 9,
+        "fields": {
+            "name": "Ingred Ivers",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 10,
+        "fields": {
+            "name": "John Johnson",
+            "user": 1
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 11,
+        "fields": {
+            "name": "Killian Kooper",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 12,
+        "fields": {
+            "name": "Lisa Lynter",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 13,
+        "fields": {
+            "name": "Mark Morrison",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 14,
+        "fields": {
+            "name": "Niles Norrington",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 15,
+        "fields": {
+            "name": "Olive OConnell",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 16,
+        "fields": {
+            "name": "Peter Philips",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 17,
+        "fields": {
+            "name": "Quintin Qunari",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 18,
+        "fields": {
+            "name": "Ryan Royce",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 19,
+        "fields": {
+            "name": "Sara Santiago",
+            "user": 2
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.student",
+        "pk": 20,
+        "fields": {
+            "name": "Trenton Thompson",
+            "user": 2
+        }
+    }
+
+]
