@@ -1,4 +1,13 @@
-"python.linting.pylintArgs": [
+{"python.linting.pylintArgs": [
     "--load-plugins=pylint_django",
     "--django-settings-module=teacher_helper_project_server.settings",
+],
+"sqltools.connections": [
+    {
+        "previewLimit": 50,
+        "driver": "SQLite",
+        "name": "Teacher Helper API",
+        "database": "db.sqlite3"
+    }
 ]
+}
