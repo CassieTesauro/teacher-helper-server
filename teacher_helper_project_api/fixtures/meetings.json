@@ -1,0 +1,131 @@
+[
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 1,
+        "fields": {
+            "name": "Alphabet Group",
+            "description": "Focus on letter A long and short sounds",
+            "date": "2022-01-20",
+            "time": "12:00:00",
+            "user": 1,
+            "learners": [1, 2]
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 2,
+        "fields": {
+            "name": "Guided Reading Low Group",
+            "description": "Read A level book",
+            "date": "2022-01-20",
+            "time": "12:15:00",
+            "user": 1,
+            "learners": [2, 4]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 3,
+        "fields": {
+            "name": "Guided Reading Middle Group",
+            "description": "Read B level book",
+            "date": "2022-01-20",
+            "time": "12:30:00",
+            "user": 1,
+            "learners": [5, 6]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 4,
+        "fields": {
+            "name": "Guided Reading High Group",
+            "description": "Read C level book",
+            "date": "2022-01-20",
+            "time": "12:45:00",
+            "user": 1,
+            "learners": [7, 8]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 5,
+        "fields": {
+            "name": "English Vocabulary Group",
+            "description": "Go over Tier 1 English Vocabulary words",
+            "date": "2022-01-20",
+            "time": "13:00:00",
+            "user": 1,
+            "learners": [9, 10]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 6,
+        "fields": {
+            "name": "Numbers Group",
+            "description": "Focus on numeral 1 counting and writing",
+            "date": "2022-01-20",
+            "time": "12:00:00",
+            "user": 2,
+            "learners": [11, 12]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 7,
+        "fields": {
+            "name": "Guided Math Low Group",
+            "description": "Practice Rocket Math level A equations",
+            "date": "2022-01-20",
+            "time": "12:15:00",
+            "user": 2,
+            "learners": [13, 14]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 8,
+        "fields": {
+            "name": "Guided Math Medium Group",
+            "description": "Practice Rocket Math level B equations",
+            "date": "2022-01-20",
+            "time": "12:30:00",
+            "user": 1,
+            "learners": [15, 16]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 9,
+        "fields": {
+            "name": "Guided Math High Group",
+            "description": "Practice Rocket Math level C equations",
+            "date": "2022-01-20",
+            "time": "12:45:00",
+            "user": 2,
+            "learners": [17, 18]
+
+        }
+    },
+    {
+        "model": "teacher_helper_project_server.meeting",
+        "pk": 10,
+        "fields": {
+            "name": "Math Vocabulary Group",
+            "description": "Go over Tier 1 Math Vocabulary words",
+            "date": "2022-01-20",
+            "time": "13:00:00",
+            "user": 2,
+            "learners": [19, 20]
+
+        }
+    }
+]

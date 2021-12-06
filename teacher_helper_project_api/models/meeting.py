@@ -8,3 +8,4 @@ class Meeting(models.Model):
     date = models.DateField() 
     time = models.TimeField() 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    learners = models.ManyToManyField("Student", through="StudentMeeting", related_name="learning")
