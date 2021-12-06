@@ -1,0 +1,4 @@
+"python.linting.pylintArgs": [
+    "--load-plugins=pylint_django",
+    "--django-settings-module=teacher_helper_project_server.settings",
+]
