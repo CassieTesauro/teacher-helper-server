@@ -1,6 +1,6 @@
 [
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 1,
         "fields": {
             "name": "Amy Anders",
@@ -8,7 +8,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 2,
         "fields": {
             "name": "Brian Brown",
@@ -16,7 +16,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 3,
         "fields": {
             "name": "Carl Cortner",
@@ -24,7 +24,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 4,
         "fields": {
             "name": "Darryl Downs",
@@ -32,7 +32,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 5,
         "fields": {
             "name": "Erica Esters",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 6,
         "fields": {
             "name": "Frank Forester",
@@ -48,7 +48,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 7,
         "fields": {
             "name": "Gavin Goodwin",
@@ -56,7 +56,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 8,
         "fields": {
             "name": "Haley Henderson",
@@ -64,7 +64,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 9,
         "fields": {
             "name": "Ingred Ivers",
@@ -72,7 +72,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 10,
         "fields": {
             "name": "John Johnson",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 11,
         "fields": {
             "name": "Killian Kooper",
@@ -88,7 +88,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 12,
         "fields": {
             "name": "Lisa Lynter",
@@ -96,7 +96,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 13,
         "fields": {
             "name": "Mark Morrison",
@@ -104,7 +104,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 14,
         "fields": {
             "name": "Niles Norrington",
@@ -112,7 +112,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 15,
         "fields": {
             "name": "Olive OConnell",
@@ -120,7 +120,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 16,
         "fields": {
             "name": "Peter Philips",
@@ -128,7 +128,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 17,
         "fields": {
             "name": "Quintin Qunari",
@@ -136,7 +136,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 18,
         "fields": {
             "name": "Ryan Royce",
@@ -144,7 +144,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 19,
         "fields": {
             "name": "Sara Santiago",
@@ -152,7 +152,7 @@
         }
     },
     {
-        "model": "teacher_helper_project_server.student",
+        "model": "teacher_helper_project_api.student",
         "pk": 20,
         "fields": {
             "name": "Trenton Thompson",
