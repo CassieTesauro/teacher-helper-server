@@ -37,6 +37,23 @@ class StudentView(ViewSet):
 
         return Response(students_serializer.data) 
 
+#get single student
+    def retrieve(self, request, pk=None):
+        """Handle GET requests for single student
+        Returns:
+            Response -- JSON serialized student instance
+        """
+        try:
+            #get current student using pk
+            requested_student = Student.objects.get(pk=pk)
+
+            #translate to JSON and respond to the client side
+            serializer = StudentsSerializer(requested_student, context={'request': request})
+            return Response(serializer.data)
+       
+        except Exception as ex:  
+            return HttpResponseServerError(ex)
+
 
 #make serializer for students
 class StudentsSerializer(serializers.ModelSerializer):
