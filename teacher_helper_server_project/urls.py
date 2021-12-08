@@ -20,10 +20,11 @@ from django.urls import path
 from teacher_helper_project_api.views import register_user, login_user
 
 from rest_framework import routers
-from teacher_helper_project_api.views import StudentView
+from teacher_helper_project_api.views import StudentView, MeetingView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'students', StudentView, 'student')
+router.register(r'meetings', MeetingView, 'meeting')
 
 urlpatterns = [
     path('register', register_user),

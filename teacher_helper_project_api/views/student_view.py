@@ -1,4 +1,5 @@
-"""View module for handling requests about games"""
+"""View module for handling requests about students"""
+
 from django.core.exceptions import ValidationError
 from rest_framework import status
 from django.http import HttpResponseServerError
