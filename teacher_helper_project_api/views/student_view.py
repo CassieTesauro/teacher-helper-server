@@ -54,6 +54,30 @@ class StudentView(ViewSet):
         except Exception as ex:  
             return HttpResponseServerError(ex)
 
+#add new student
+    def create(self, request):
+        """Handle POST operations
+        Returns:
+            Response -- JSON serialized game instance
+        """
+        #specify current user
+        current_user = request.auth.user 
+
+       #set up new student object with user inputs
+        try:
+            new_student = Student.objects.create( 
+                name=request.data["name"],  
+                user=current_user,
+            )
+         
+            #translate to JSON and respond to the client side
+            serializer = StudentsSerializer(new_student, context={'request': request})  
+            
+            return Response(serializer.data)
+
+        except ValidationError as ex:
+            return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
+
 
 #make serializer for students
 class StudentsSerializer(serializers.ModelSerializer):
