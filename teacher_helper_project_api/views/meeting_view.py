@@ -62,6 +62,41 @@ class MeetingView(ViewSet):
             return HttpResponseServerError(ex)
 
 
+    #add new meeting
+    def create(self, request):
+        """Handle POST operations
+        Returns:
+            Response -- JSON serialized meeting instance
+        """
+        #specify current user
+        current_user = request.auth.user 
+
+       #set up new student object with user inputs
+        try:
+            new_meeting = Meeting.objects.create( 
+                name=request.data["name"],  
+                description=request.data["description"],  
+                date=request.data["date"],  
+                time=request.data["time"],  
+                user=current_user
+            )
+
+            new_meeting.learners.set(request.data["learners"])  #hints- must be outside of the above because object must be made after look @ fixtures as syntax guide for building test object in postman
+
+
+            #translate to JSON and respond to the client side
+            meeting_serializer = MeetingsSerializer(new_meeting, context={'request': request})  
+            
+            return Response(meeting_serializer.data)
+
+        except ValidationError as ex:
+            return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+
 
 #make serializer for students because meeting includes students (refer to meetings model 'learners')
 class StudentsSerializer(serializers.ModelSerializer):
