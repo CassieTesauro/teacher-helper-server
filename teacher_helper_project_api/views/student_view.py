@@ -58,7 +58,7 @@ class StudentView(ViewSet):
     def create(self, request):
         """Handle POST operations
         Returns:
-            Response -- JSON serialized game instance
+            Response -- JSON serialized student instance
         """
         #specify current user
         current_user = request.auth.user 
@@ -78,6 +78,25 @@ class StudentView(ViewSet):
         except ValidationError as ex:
             return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
 
+#delete single student
+    def destroy(self, request, pk=None):
+        """Handle DELETE requests for a single student
+        Returns:
+            Response -- 200, 404, or 500 status code
+        """
+        #identify student to delete by pk and call orm
+        try:
+            student_to_delete = Student.objects.get(pk=pk)
+            student_to_delete.delete()
+
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+        
+        #send error statuses if method fails
+        except student_to_delete.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 #make serializer for students
 class StudentsSerializer(serializers.ModelSerializer):
