@@ -26,16 +26,12 @@ class MeetingView(ViewSet):
         #get current user
         current_user = request.auth.user
 
-
         #get all Meetings 
         meetings = Meeting.objects.all()   
-            
 
-
-        #get all meetings with current user's pk as a foreign key
+        #filter meetings to get all meetings belonging to current user
         if meetings is not None:
             current_user_meetings = meetings.filter(user_id=current_user)  # section in filter is (column in sql table :: what we're matching to in filter)
-
 
         #translate to JSON and respond to client side
         meetings_serializer = MeetingsSerializer(
@@ -59,19 +55,15 @@ class MeetingView(ViewSet):
             meeting_serializer = MeetingsSerializer(
                 requested_meeting, context={'request': request})
 
-            
-        
-  
 
             return Response(meeting_serializer.data)
-       
-       
-       
+           
         except Exception as ex:  
             return HttpResponseServerError(ex)
 
 
-#make serializer for students
+
+#make serializer for students because meeting includes students (refer to meetings model 'learners')
 class StudentsSerializer(serializers.ModelSerializer):
     """JSON serializer for students
     Arguments:
@@ -83,14 +75,14 @@ class StudentsSerializer(serializers.ModelSerializer):
         depth = 1
 
 
-#make serializer for meetings
+
+#make serializer for meetings and include the learners
 class MeetingsSerializer(serializers.ModelSerializer):
     """JSON serializer for meetings
     Arguments:
         serializer type
     """
   
-
     class Meta:
         model = Meeting
         fields = ('id', 'name', 'description', 'date', 'time', 'learners')
