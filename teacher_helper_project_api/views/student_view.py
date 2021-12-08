@@ -98,6 +98,23 @@ class StudentView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+#edit single student
+    def update(self, request, pk=None):
+        """Handle PUT requests for a student
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+
+        #specify student to edit
+        student_to_update = Student.objects.get(pk=pk)
+
+        #update student info
+        student_to_update.name = request.data["name"] 
+        student_to_update.save()
+
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+
 #make serializer for students
 class StudentsSerializer(serializers.ModelSerializer):
     """JSON serializer for students
