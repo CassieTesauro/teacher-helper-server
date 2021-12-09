@@ -107,7 +107,7 @@ class MeetingView(ViewSet):
             return Response({}, status=status.HTTP_204_NO_CONTENT)
         
         #send error statuses if method fails
-        except student_to_delete.DoesNotExist as ex:
+        except meeting_to_delete.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as ex:
