@@ -93,7 +93,25 @@ class MeetingView(ViewSet):
             return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
 
 
+#delete single meeting
+    def destroy(self, request, pk=None):
+        """Handle DELETE requests for a single meeting
+        Returns:
+            Response -- 200, 404, or 500 status code
+        """
+        #identify meeting to delete by pk and call orm
+        try:
+            meeting_to_delete = Meeting.objects.get(pk=pk)
+            meeting_to_delete.delete()
 
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+        
+        #send error statuses if method fails
+        except student_to_delete.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 
