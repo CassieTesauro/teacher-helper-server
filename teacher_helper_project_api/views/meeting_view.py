@@ -71,7 +71,7 @@ class MeetingView(ViewSet):
         #specify current user
         current_user = request.auth.user 
 
-       #set up new student object with user inputs
+       #set up new meeting object with user inputs
         try:
             new_meeting = Meeting.objects.create( 
                 name=request.data["name"],  
@@ -114,6 +114,27 @@ class MeetingView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+#edit single meeting
+    def update(self, request, pk=None):
+        """Handle PUT requests for a meeting
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+
+        #specify meeting to edit
+        meeting_to_update = Meeting.objects.get(pk=pk)
+
+        #update meeting info then updateassigned students info
+        meeting_to_update.name = request.data["name"] 
+        meeting_to_update.description = request.data["description"] 
+        meeting_to_update.date = request.data["date"] 
+        meeting_to_update.time = request.data["time"] 
+        meeting_to_update.save()
+
+        meeting_to_update.learners.set(request.data["learners"])
+        meeting_to_update.save()
+
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
 
 
 #make serializer for students because meeting includes students (refer to meetings model 'learners')
