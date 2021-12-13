@@ -45,6 +45,7 @@ def register_user(request):
     #can pick and choose from model
     user = User.objects.create_user(
         username=request.data['username'],
+        email=request.data['email'],
         password=request.data['password'],
         first_name=request.data['first_name'],
         last_name=request.data['last_name']

@@ -32,6 +32,7 @@ class StudentView(ViewSet):
             current_user_students = students.filter(user_id=current_user)  # section in filter is (column in student table :: what we're matching to in filter)
 
 
+
         #translate to JSON and respond to client side
         students_serializer = StudentsSerializer(
             current_user_students, many=True, context={'request': request}) 
@@ -124,5 +125,5 @@ class StudentsSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Student
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'user_id')
         depth = 1
